@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  input {
+    padding: 16px;
+    background-color: var(--background_second);
+    border: 1px solid var(--border_accent);
+    transition: 400ms;
+    border-radius: 20px;
+    width: 100%;
+    color: var(--text_accent);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: none;
+
+    &:hover + label {
+      color: var(--text_accent);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 rgb(255, 255, 255);
+      border: 1px solid var(--border_second);
+    }
+
+    &:focus + label {
+      top: -10px;
+      left: 16px;
+      padding: 0 8px;
+      color: var(--text_accent);
+    }
+  }
+
+  input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 16px;
+    padding: 0 8px;
+  }
+
+  label {
+    position: absolute;
+    cursor: text;
+    color: var(--border_accent);
+    left: 24px;
+    top: 17px;
+    transition: all 200ms ease-in;
+    background-color: var(--background_second);
+  }
+}
