@@ -1,0 +1,56 @@
+.btn {
+  padding: 18px 16px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // @include transition;
+  // @include tButton;
+  position: relative;
+  user-select: none;
+  touch-action: manipulation;
+  background: white;
+  opacity: 1;
+  transition: all 300ms ease-in;
+
+  &.loading {
+    display: flex;
+    align-items: center;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &.medium {
+    padding: 13px 20px;
+
+    &.loading {
+      height: 48px;
+    }
+  }
+
+  &.primary {
+    background: var(--PAA_Brand_Primary);
+    color: var(--PA_Overlay_Text_Primary);
+    // border: 1px solid transparent;
+
+    &:hover {
+      background: var(--PAA_Negative);
+    }
+
+    &:active {
+      background: var(--PAA_Brand_Primary);
+    }
+
+    &:disabled {
+      cursor: unset;
+      background: var(--PAA_Brand_Primary);
+      opacity: 0.5;
+    }
+  }
+}

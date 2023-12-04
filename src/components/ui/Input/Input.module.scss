@@ -9,29 +9,29 @@
 
   input {
     padding: 16px;
-    background-color: var(--background_second);
-    border: 1px solid var(--border_accent);
+    background-color: var(--white);
+    border: 1px solid var(--gray_600);
     transition: 400ms;
     border-radius: 20px;
     width: 100%;
-    color: var(--text_accent);
+    color: var(--blue_600);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     outline: none;
 
     &:hover + label {
-      color: var(--text_accent);
+      color: var(--blue_600);
     }
 
     &:focus {
       box-shadow: 0 0 0 rgb(255, 255, 255);
-      border: 1px solid var(--border_second);
+      border: 1px solid var(--blue_600);
     }
 
     &:focus + label {
       top: -10px;
       left: 16px;
       padding: 0 8px;
-      color: var(--text_accent);
+      color: var(--blue_600);
     }
   }
 
@@ -44,10 +44,10 @@
   label {
     position: absolute;
     cursor: text;
-    color: var(--border_accent);
+    color: var(--gray_600);
     left: 24px;
     top: 17px;
     transition: all 200ms ease-in;
-    background-color: var(--background_second);
+    background-color: var(--white);
   }
 }
